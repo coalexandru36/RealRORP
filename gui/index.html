@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+    href="https://kit-pro.fontawesome.com/releases/v5.14.0/css/pro.min.css"
+    rel="stylesheet"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Rajdhani:600' rel='stylesheet' type='text/css'>
+  <!--<script src="Menu.js" type="text/javascript"></script>-->
+  <script src="ProgressBar.js" type="text/javascript"></script>
+  <script src="WPrompt.js" type="text/javascript"></script>
+  <script src="RequestManager.js" type="text/javascript"></script>
+  <script src="AnnounceManager.js" type="text/javascript"></script>
+  <script src="Div.js" type="text/javascript"></script>
+  <script src="main.js" type="text/javascript"></script>
+  <link href="design.css" rel="stylesheet" type="text/css" />
+
+  <link href="deathscreen.css" type="text/css" rel="stylesheet">
+  <script src="ogrp.menu.js" type="text/javascript"></script>
+  <script src="ogrp.main.js" type="text/javascript"></script>
+  <link href="ogrp.menu.css" rel="stylesheet" type="text/css" />
+  <script src="underground.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"/>
+  <link href="cnn.css" rel="stylesheet" type="text/css"/>
+  <script src="https://kit.fontawesome.com/aef25c3e23.js" crossorigin="anonymous"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+    rel="stylesheet"
+  />
+
+
+    <link rel="stylesheet" href="selectorMenu.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet"> -->
+    <script src="./lib/vue.js"></script>
+  </head>
+
+  <body>
+
+ 
+
+    <div class="adminAnnouncementContainer" id="adminAnnouncementContainer" style="display: none;">
+      <span class="adminTitle"><span class="bt" style=" padding: 2px 12px 2px 12px;">ANUNT <span style="text-shadow: 0px 0px 10px rgba(11, 140, 191, 0.82);background: #128acf;background: linear-gradient(to right, #0c7eb3 0%, #00dada 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">ADMINISTRATIV</span></span>
+          <br><span class="adminSend">Trimis de <span id="admAnnName"></span>[<span id="admAnnId"></span>]</span><br>
+          <span class="adminMessage" id="admAnnMessage">Se va organiza un eveniment de tip "X-O". Pentru a participa, tastati comanda [/gotoevent]. Nu aveti voie sa va bateti intre voi, si trebuie sa fiti foarte cuminti!</span>
+      </span>
+    </div>
+    <div class="deathscreen" style="display:none;">
+        <div class="center center-big-strat-unu"></div>
+        <div class="center center-big-strat-doi"></div>
+        <img class="center center-big-imagine-mort" src="https://cdn.discordapp.com/attachments/996839091821887558/1023526894672564254/unnamed-removebg-preview.png">
+
+        <!-- Texte deathscreen -->
+        <h1 class="center default-text dead-text">ESTI<br><span style="z-index: 1;">MORT</span></h1>
+        <div class="center default-text info-e" style="display:none;"> Apasa<br><span style="border: 2px solid #5900ff; padding: 0px 15px; ">E</span><br>pentru respawn
+        </div>
+        <div class="center respawnTimer">
+            <div class="box-ico"><i class="far fa-clock"></i></div>
+            TE RESPAWNEZI IN <b><span id="remainingSeconds" style="color: #5900ff; animation: box-shadow-text-secunde .5s; animation-iteration-count: infinite;">250</b> DE SECUNDE
+        </div>
+        <div class="center some-text-jos">
+            APELURILE FACUTE MORT SUNT CONSIDERATE <span class="text-glow-alb">NON-ROLEPLAY</span> SI POT FI SANCTIONATE
+            IN CAZUL UNEI RECLAMATII<br>DACA CONSIDERI CA AI MURIT <span class="text-glow-alb">NON-ROLEPLAY</span> POTI
+            FACE UN TICKET FOLOSIND <span class="text-glow-alb">K -> ADMIN -> CHEAMA UN ADMIN</span><br> Dupa 5 minute <span class="text-glow-alb"> puteti apasa tasta E </span> pentru a primi respawn </span> 
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <div id = "tickete" style = "display: none;"><span id = "ticketeStaff" style="color:#452d6f">00</span>&nbsp;Tickete</div>
+    <!-- <div class="container"> -->
+      <div class="logo"></div> 
+      <div class="cont2">
+      <div class="text" id="id"><strong>ID &nbsp;</strong>2000<i class="fa-solid fa-users"></i></div>
+      <div class="text" id="jucatori">50/128<i class="fa-solid fa-clock"></i></div>
+      <div class="text" id="ora">12:30</div>
+      <div class="numeserver"><strong><span style="color:#800edd;"> r I R O </span>&nbsp;&nbsp;R O M A N I A</strong></div>
+     </div>
+     <div class="containermoney">
+      <div class="cash" id="cash">10.000<i class="fa-solid fa-sack-dollar"></i></div>
+      <div class="bank" id="bank">69.000<i class="fa-solid fa-building-columns"></i></div>
+    </div>
+    <div id="safezone" style="display: none">SAFEZONE
+      <div class ="safezone2"></div>
+    <!-- </div> -->
+    </div>
+
+  </body>
+  <body>
+
+
+
+    <div class="announcement" id="announcement" style="display: none;">
+      <div class="annTitle"><i class="fas fa-satellite-dish"></i> &nbsp;Anunt Comercial</div>
+      <div class="annSender">Telefon: <span id="annSenderphone">0769696969</span></div>
+      <div class="annMessage"> <span id="annMessage"></span></div>
+    </div>
+
+    <div class="announcement" id="announcementDarkWeb" style="display: none;">
+        <div class="annTitle"><i class="fas fa-skull"></i> &nbsp;Anunt Dark Web</div>
+        <div class="annSender">Telefon: <span id="annSenderphoneDARKWEB">0769696969</span></div>
+        <div class="annMessage"> <span id="annMessageDARKWEB"></span></div>
+    </div>
+
+    <div class="announcement" id="announcementEveniment" style="display: none;">
+      <div class="annTitle"><i class="fas fa-calendar-days"></i> &nbsp;Anunt Eveniment</div>
+      <div class="annSender">Telefon: <span id="annSenderphoneEVENT">0769696969</span></div>
+      <div class="annMessage"> <span id="annMessageEVENT"></span></div>
+    </div>
+  </body>  
+
+  <body style="background: none; font-family: Montserrat;">
+    <div v-if="active" id="defselector">
+      <div class="npc" v-cloak>
+        <div class="allbottom">
+          <a>{{numele_npcului}}</a>
+          <p>{{rolul_npcului}}</p>
+          <div class="textblock">
+            <div class="textblock__text">
+              {{text_npc}}
+            </div>
+          </div>
+          <div class="answerbtns">
+            <div v-for="(item, index) in tableNpc[idMeniu]" @click="postInClient(item.Event)" v-if="item.Text != null" class="btn">
+              {{item.Text}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./lib/jquery-3.2.1.min.js"></script>
+    <script src="./selectorMenu.js"></script>
+
+
+  </body>
+
+
+</html>

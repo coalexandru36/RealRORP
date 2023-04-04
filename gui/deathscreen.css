@@ -1,0 +1,207 @@
+/* *{
+  margin: 0;
+  padding: 0;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+
+:root{
+    --main-clr-mov-700: #72b9fb8a;
+    --main-clr-mov-800: rgb(0, 217, 255);
+    --main-clr-mov-900: #6d99cb;
+    --main-clr-mov-1000: #305462e8;
+    --main-clr-gri: #ffffff20;
+    --main-clr-alb: rgb(255, 255, 255);
+    --main-clr-white-50: rgba(255, 255, 255, .50);
+}
+
+*, *::after, *::before{
+    margin: 0;
+}
+
+.deathscreen{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.637);
+    animation: death-full-fadein .5s;
+
+    /* Toggle responsive display */
+    /* display: none; */
+}
+
+@keyframes death-full-fadein{
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.default-text{
+    color: white;
+    letter-spacing: .3px;
+    text-align: center;
+}
+
+/* background: linear-gradient(to top, rgba(0,0,0,.05), rgba(91, 2, 224, .02), rgba(91, 2, 224, .10)); */
+/* --var-mov-interesant: rgba(21, 3, 49, .20); */
+
+.center-big-strat-unu{
+    background: linear-gradient(to top, rgba(0,0,0,.05), rgba(2, 124, 224, 0.01), rgba(2, 124, 224, .05));
+    width: 60%;
+    height: 100%;
+    z-index: 1;
+}
+
+.center-big-strat-doi{
+    background: linear-gradient(to top, rgba(0,0,0,.05), rgba(2, 124, 224, .02), rgba(2, 124, 224, .06));
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+}
+
+.center-big-imagine-mort{
+    top: 30%;
+    width: 30%;
+    height: 40%;
+    z-index: 3;
+    opacity: .7;
+}
+
+.dead-text{
+    top: 60%;
+    font-family: 'Nosifer', cursive;
+    font-weight: 1000;
+    font-size: 5.5vw;
+    line-height: 85px;
+    text-shadow: 0px 0px 2vh rgb(0 0 0 / 50%), 0px 0px 1vh rgba(255, 255, 255, 0.733);
+    color: rgba(255, 255, 255, 0.767);
+    z-index: 2;
+}
+
+
+.respawnTimer {
+    top: 85%;
+	height: 2vw;
+    width: 25%;
+
+	font-family: 'Rajdhani';
+    color: #fff;
+	line-height: 2.1vw;
+    text-transform: uppercase;
+	text-align: right;
+	font-weight: 400;
+	font-size: 1.15vw;
+    letter-spacing: .1vw;
+
+    transition: all 1s;
+    animation: displayRemainingTime .5s;
+    animation-fill-mode: forwards;
+
+    border-radius: 0.35vw;
+    border: 2px solid rgb(0, 217, 255);
+    padding: 25px;
+
+    background: #00000060;
+    z-index: 4;
+}
+
+@keyframes box-shadow-text-secunde {
+    from {
+        text-shadow: 0 0 0px rgba(0,0,0,0);
+    } to {
+        text-shadow: 0 0 45px rgb(0, 217, 255);
+    }
+}
+
+.respawnTimer .box-ico {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+	float: inline-start;
+    text-align: center;
+    width: 2vw;
+	height: 2vw;
+    padding: 8px 10px 8px 13px;
+
+    text-shadow: 0 0 5px rgb(0, 217, 255);
+    font-size: 25px;
+	color: #fff;
+
+	border-radius: 0.25vw;
+    background: radial-gradient(#258e9c2e, #1ec7bc5c, #00e1ffe8);
+    border: 2px solid rgb(0, 217, 255);
+}
+
+@keyframes displayRemainingTime {
+    from {
+        padding-right: .2vw;
+        padding-left: 1vw;
+        box-shadow: 0 0 135px #5900ff8e, inset 0 0 65px #00f7ffa1;
+    }
+    to {
+        padding-right: 1.4vw;
+        padding-left: 3vw;
+        box-shadow: 0 0 5px #5900ff8e, inset 0 0 35px #00f7ffa1;
+    }
+}
+
+.info-e{
+    top: 68%;
+    font-family: 'Smooch Sans';
+    font-weight: 600;
+    font-size: 1.75vw;
+    padding: 15px 5px;
+    border-radius: .25vw;
+    line-height: 50px;
+    z-index: 4;
+}
+
+.informatie{
+    top: 67.5%;
+    font-family: 'Roboto';
+    font-weight: 1000;
+    font-size: 2.5vw;
+    line-height: 75px;
+    z-index: 2;
+    color:rgba(255, 255, 255, 0.1);
+    text-shadow: 0 0 35px rgba(0,0,0,.90);
+}
+
+.some-text-jos{
+    top: 95%;
+    max-width: 35vw;
+
+    font-family: 'Smooch Sans';
+    font-weight: 1000;
+    font-size: 17px;
+    text-align: center;
+
+    z-index: 2;
+    color:rgba(255, 255, 255, 0.637);
+    text-shadow: 0 0 35px rgba(0,0,0,.90);
+}
+
+.text-glow-alb{
+    animation: text-anim-glow-alb 4.0s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes text-anim-glow-alb{
+    from {
+        color:rgba(255, 255, 255, 0.637);
+    } to {
+        color:rgb(0, 195, 255);
+    }
+}
